@@ -7,7 +7,7 @@ import numpy as np
 import keras.backend as K
 import datetime as dt
 
-from ..untils import config
+from ..utils import config
 from ..owlio import process_axioms
 from sklearn.metrics import confusion_matrix,precision_recall_fscore_support
 

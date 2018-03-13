@@ -2,7 +2,7 @@ import unittest
 from src.owlio import process_axioms
 from src.modelling import gen_input
 import os
-from src.untils import config
+from src.utils import config
 
 class MyTestCase(unittest.TestCase):
     def notest_tbox(self):

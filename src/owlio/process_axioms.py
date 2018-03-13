@@ -1,6 +1,6 @@
 from owlready2 import *
 import logging
-from ..untils import config
+from ..utils import config
 import numpy as np
 import json
 
