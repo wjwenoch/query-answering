@@ -32,7 +32,7 @@ where {?s a ?o}
 
 -After uploading some files, if the load_lst table is not cleared, you may run into problems. Clear the rows:
 ```DELETE FROM DB.DBA.load_list```   
--Delete a graph with all its triples by ```SPARQL CLEAR GRAPH```  
+-Delete a graph with all its triples by ```SPARQL CLEAR GRAPH <named graph id>```  
 -Check all the named graphs in the databases:
 ```
 sparql 
