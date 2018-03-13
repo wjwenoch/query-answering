@@ -4,13 +4,15 @@
 Use the interactive SQL interface: http://localhost:8890/conductor/isql_main.vspx
 ### Load data
 To load a single file, use the following
+
 ```SPARQL LOAD <path-to-file-wo-file-protocol> into <graph-name>```
 
 +Note that D:/ontologies must be in the **DirsAllowed** in virtuoso.ini file.  
 +Make sure the memory options in virtuoso has been properly set to allow for quick loading of large datasets 
 
 To load multiple files in a dir, use this:
-```ld_dir('D:/ontologies/lubm/data/','*.owl','http://swat.cse.lehigh.edu/onto/univ-bench.owl')```
+
+```ld_dir('D:/ontologies/lubm/data/','*.owl','http://swat.cse.lehigh.edu/onto/univ-bench/data')```
 
 +If the graph uri is not present, a single filed named 'global.graph' with the default graph name can be put in the dir.
 
