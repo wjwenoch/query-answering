@@ -5,7 +5,7 @@ Use the interactive SQL interface: http://localhost:8890/conductor/isql_main.vsp
 ### Load data
 To load a single file, use the following
 
-```SPARQL LOAD <path-to-file-wo-file-protocol> into <graph-name>```
+```SPARQL LOAD <path-to-file-wo-file-protocol> into graph <graph-name>```
 
 +Note that D:/ontologies must be in the **DirsAllowed** in virtuoso.ini file.  
 +Make sure the memory options in virtuoso has been properly set to allow for quick loading of large datasets 
