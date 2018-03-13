@@ -54,3 +54,13 @@ Verify if the schema has been properly set:
 SELECT *
 FROM sys_rdf_schema
 ```
+### Issue queries with inference support
+An example:
+```
+sparql
+DEFINE input:inference 'lubm:schema'
+PREFIX ub:<http://swat.cse.lehigh.edu/onto/univ-bench.owl#> 
+select ?x 
+from <http://swat.cse.lehigh.edu/onto/univ-bench/data>
+where { ?x rdf:type ub:Person . <http://www.University0.edu> ub:hasAlumnus ?x }
+```
