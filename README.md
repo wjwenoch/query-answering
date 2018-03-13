@@ -26,8 +26,8 @@ Verify the list of files again to check if the state is 2 (success)
 Test a query to check the number of triple loaded:
 ```
 SPARQL 
-select count(*) from <http://swat.cse.lehigh.edu/onto/univ-bench.owl>
-where {?s a ?o}
+select count(*) from <http://swat.cse.lehigh.edu/onto/univ-bench/data>
+where {?s ?p ?o}
 ```
 
 -After uploading some files, if the load_lst table is not cleared, you may run into problems. Clear the rows:
