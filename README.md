@@ -68,3 +68,6 @@ select ?x
 from <http://swat.cse.lehigh.edu/onto/univ-bench/data>
 where { ?x rdf:type ub:Person . <http://www.University0.edu> ub:hasAlumnus ?x }
 ```
+### Major issues with Virtuoso: no automatic reasoning supported.
+To obtain correct answers for LUBM, manual modifications to the data and queries are [necessary](https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSArticleLUBMBenchmark).
+In particular, the **Entailment** section.
