@@ -74,4 +74,4 @@ In particular, the **Entailment** section.
 
 We chose the materialization approach, in which first the data is materialized manually using the [file](./virtuosoFix.txt)
 
-Then the query text is obtained from the 'Query Text With Materialized Entailed Triples'
+Then the query text is obtained from the 'Query Text With Materialized Entailed Triples' using the [file](./lubmVirtuosoQueries.txt)
