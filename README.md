@@ -45,8 +45,10 @@ WHERE  { GRAPH ?g {?s ?p ?o} }
 ### Load schema for inferences
 First load a schema file:
 ```
-SPARQL LOAD <D:/ontologies/lubm/univ-bench.owl> into <http://swat.cse.lehigh.edu/onto/univ-bench.owl>
+SPARQL LOAD <http://swat.cse.lehigh.edu/onto/univ-bench.owl> into <http://swat.cse.lehigh.edu/onto/univ-bench.owl>
 ```
+**Note that the above command, for some reason, only works with http protocol. If the schema is a local file, try the other command from DB. E.g., [RDF_LOAD_RDFXML_MT](http://docs.openlinksw.com/virtuoso/fn_rdf_load_rdfxml_mt/)**
+
 Make a ruleset from it:
 ```
 rdfs_rule_set ('lubm:schema', 'http://swat.cse.lehigh.edu/onto/univ-bench.owl') ;
