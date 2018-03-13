@@ -4,13 +4,13 @@
 Use the interactive SQL interface: http://localhost:8890/conductor/isql_main.vspx
 ### Load data
 To load a single file, use the following
-SPARQL LOAD <D:/ontologies/lubm/univ-bench.owl> into <http://swat.cse.lehigh.edu/onto/univ-bench.owl>
+```SPARQL LOAD <D:/ontologies/lubm/univ-bench.owl> into <http://swat.cse.lehigh.edu/onto/univ-bench/data>```
 
 +Note that D:/ontologies must be in the **DirsAllowed** in virtuoso.ini file.  
 +Make sure the memory options in virtuoso has been properly set to allow for quick loading of large datasets 
 
 To load multiple files in a dir, use this:
-ld_dir('D:/ontologies/lubm/data/','*.owl','http://swat.cse.lehigh.edu/onto/univ-bench.owl')
+```ld_dir('D:/ontologies/lubm/data/','*.owl','http://swat.cse.lehigh.edu/onto/univ-bench.owl')```
 
 +If the graph uri is not present, a single filed named 'global.graph' with the default graph name can be put in the dir.
 
@@ -41,3 +41,16 @@ WHERE  { GRAPH ?g {?s ?p ?o} }
 ```
 
 ### Load schema for inferences
+First load a schema file:
+```
+SPARQL LOAD <D:/ontologies/lubm/univ-bench.owl> into <http://swat.cse.lehigh.edu/onto/univ-bench.owl>
+```
+Make a ruleset from it:
+```
+rdfs_rule_set ('lubm:schema', 'http://swat.cse.lehigh.edu/onto/univ-bench.owl') ;
+```
+Verify if the schema has been properly set:
+```
+SELECT *
+FROM sys_rdf_schema
+```
