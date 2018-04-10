@@ -14,6 +14,7 @@ class MyTestCase(unittest.TestCase):
             qid, q = sparql_vir.lubm_sample_query_for_virtuoso(i)
             logging.info("query to issue: %s", q)
             resp = sparql_vir.issue_queries(q, query_name=qid, dataset_prefix='u1')
+            print(resp)
             #logging.info(resp)
             time.sleep(2)
 
